@@ -1,7 +1,7 @@
 <template>
   <base-container title="Vuex-Counter">
-    <h3>{{ $store.state.counter }}</h3>
-    <button>Add 1</button>
+   <the-counter></the-counter>
+    <button @click="addOne">Add 1</button>
   </base-container>
   <!-- Adding a counter state -->
 </template>
@@ -9,10 +9,18 @@
 <!-- We are going to manage the counter state with vuex as if it were a global state -->
 <script>
 import BaseContainer from './components/BaseContainer.vue'
+import TheCounter from './components/TheCounter.vue';
 
 export default {
   components: {
-    BaseContainer
+    BaseContainer,
+    TheCounter
+  }, 
+  
+  methods: {
+    addOne() {
+      this.$store.state.counter++
+    }
   }
 }
 </script>
