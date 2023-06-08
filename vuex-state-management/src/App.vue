@@ -1,7 +1,8 @@
 <template>
   <base-container title="Vuex-Counter">
-   <the-counter></the-counter>
+    <the-counter></the-counter>
     <button @click="addOne">Add 1</button>
+    <change-counter></change-counter>
   </base-container>
   <!-- Adding a counter state -->
 </template>
@@ -9,17 +10,20 @@
 <!-- We are going to manage the counter state with vuex as if it were a global state -->
 <script>
 import BaseContainer from './components/BaseContainer.vue'
-import TheCounter from './components/TheCounter.vue';
+import TheCounter from './components/TheCounter.vue'
+import ChangeCounter from './components/ChangeCounter.vue'
 
 export default {
   components: {
     BaseContainer,
-    TheCounter
-  }, 
-  
+    TheCounter,
+    ChangeCounter
+  },
+
   methods: {
     addOne() {
-      this.$store.state.counter++
+      // trigger the mutation
+      this.$store.commit('increment')
     }
   }
 }
