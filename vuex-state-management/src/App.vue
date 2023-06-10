@@ -1,7 +1,7 @@
 <template>
   <base-container title="Vuex-Counter">
     <the-counter></the-counter>
-    <button @click="addOne">Add 1</button>
+    <button @click="addOne">Add 10</button>
     <change-counter></change-counter>
   </base-container>
   <!-- Adding a counter state -->
@@ -23,7 +23,12 @@ export default {
   methods: {
     addOne() {
       // trigger the mutation
-      this.$store.commit('increment')
+      // this.$store.commit('increase', { value: 10 })
+      // Alternative way of committing
+      this.$store.commit({
+        type: 'increase',
+        value: 10
+      })
     }
   }
 }
