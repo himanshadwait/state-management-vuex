@@ -5,6 +5,7 @@ import App from './App.vue'
 
 // Splitting the store into multiple modules
 const counterModule = {
+  namespaced: true,
   state() {
     return {
       counter: 0
@@ -49,7 +50,7 @@ const counterModule = {
 //global store
 const store = createStore({
   modules: {
-    counter: counterModule
+    counter: counterModule // Namespace of the counterModule
   },
   // root state or module or authentication module
   state() {

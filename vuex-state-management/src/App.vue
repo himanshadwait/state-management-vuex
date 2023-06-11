@@ -34,7 +34,8 @@ export default {
       // this.$store.dispatch('increase', { value: 10 })
       // Alternative way of committing
       this.$store.dispatch({
-        type: 'increase',
+        // Namespacing a module
+        type: 'counter/increase',
         value: 10
       })
     }

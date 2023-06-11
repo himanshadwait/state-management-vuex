@@ -13,7 +13,7 @@ export default {
     //   this.$store.dispatch('increment')
     // }
     // ...mapActions(['increment', 'increase'])
-    ...mapActions({
+    ...mapActions('counter', {
       // somePropName: "methodName"
       increment: 'increment',
       increase: 'increase'

@@ -7,7 +7,8 @@
 export default {
   computed: {
     counter() {
-      return this.$store.getters.normalisedCounter
+      // Namespacing a module
+      return this.$store.getters['counter/normalisedCounter']
     }
   }
 }

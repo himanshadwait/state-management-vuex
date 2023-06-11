@@ -53,3 +53,5 @@ Two main kinds of state:
 The code which runs asynchronously doesn't finish immediately but sometimes in future. The mutations must be synchronous. Vuex has better concept in place for working with asynchronous code. It has Actions. Components should trigger actions which then in turn commit mutations. It is considered good practice in general to always put action between Components and Mutations to ensure that we never put asynchronous code in mutations, even though components could commit mutations themselves.
 
 Do not alter the state in Actions, mutations are there for that purpose.    
+
+Namespaced Modules: makes sure that multiple modules are clearly separated from each other
