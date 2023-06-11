@@ -26,9 +26,9 @@ export default {
   methods: {
     addOne() {
       // trigger the mutation
-      // this.$store.commit('increase', { value: 10 })
+      // this.$store.dispatch('increase', { value: 10 })
       // Alternative way of committing
-      this.$store.commit({
+      this.$store.dispatch({
         type: 'increase',
         value: 10
       })

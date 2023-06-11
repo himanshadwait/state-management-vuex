@@ -49,3 +49,5 @@ Two main kinds of state:
 
 1. Local State: Data we manage inside of one component, which only affects this one component and possibly, indirectly through props also a child component
 2. Global State: Data that affects multiple components, possibly the entire app. Data that we need in a lot of different places.
+   
+The code which runs asynchronously doesn't finish immediately but sometimes in future. The mutations must be synchronous. Vuex has better concept in place for working with asynchronous code. It has Actions. Components should trigger actions which then in turn commit mutations. It is considered good practice in general to always put action between Components and Mutations to ensure that we never put asynchronous code in mutations, even though components could commit mutations themselves.

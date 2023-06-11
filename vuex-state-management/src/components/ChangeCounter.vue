@@ -7,7 +7,7 @@ export default {
   methods: {
     addOne() {
       // trigger the mutations
-      this.$store.commit('increment')
+      this.$store.dispatch('increment')
     }
   }
 }
