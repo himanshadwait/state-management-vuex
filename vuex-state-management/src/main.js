@@ -24,12 +24,13 @@ const store = createStore({
       }, 2000)
     },
     increase(context, payload) {
-      context.commit("increase", payload);
+      console.log(context)
+      context.commit('increase', payload)
     }
   },
   getters: {
     finalCounter(state) {
-      return state.counter * 2
+      return state.counter
     },
     normalisedCounter(_, getters) {
       const finalCounter = getters.finalCounter
